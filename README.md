@@ -1,17 +1,16 @@
 # **FACTORS: Fine-grained Apparel category Classification & Try-On Recommender System**
 
+## **METHODOLOGY**
 
-## **METHODOLOGY** 
+The project is designed by the help of deep learning with the implementation of an interactive module where people can input their image and in turn find their desired clothing on their bodies. The project is divided into several modules:
 
-The project is designed by the help of deep learning with the implementation of an interactive module where people can input their image and in turn find their desired clothing on their bodies. The project is divided into several modules: 
+1. Human Segmentation: The image inputted by the user will contain all the background and disturbances, which must be eliminated or segmented for further processing. This method of human segmentation must be done by U2 net. The human body is separated from the background and retrieved for further processing.
 
-1. Human Segmentation: The image inputted by the user will contain all the background and disturbances, which must be eliminated or segmented for further processing. This method of human segmentation must be done by U2 net. The human body is separated from the background and retrieved for further processing. 
+2. Predicting the posing of the human: The COCO format is used to convert the image format dataset to a specific JSON structure. Each body part is given a number with point pairs. The key points are generated for the pose which is used in the further parts of the code.
 
-2. Predicting the posing of the human: The COCO format is used to convert the image format dataset to a specific JSON structure. Each body part is given a number with point pairs. The key points are generated for the pose which is used in the further parts of the code. 
+3. Human Parsing: Human parsing is the task of segmenting a human image into different fine-grained semantic parts such as head, torso, arms and legs. The clothing and the body parts in the user’s image are then parsed to find the definitive part where the clothing lies and where the body part is exposed.
 
-3. Human Parsing: Human parsing is the task of segmenting a human image into different fine-grained semantic parts such as head, torso, arms and legs. The clothing and the body parts in the user’s image are then parsed to find the definitive part where the clothing lies and where the body part is exposed. 
-
-4. Clothing warping: The clothing is warped and transformed according to the points of the human body to be superimposed on it. 
+4. Clothing warping: The clothing is warped and transformed according to the points of the human body to be superimposed on it.
 
 - VITON dataset contains 16253 image pairs composed of an upper-body garment. Images are divided into training and test sets with 14, 221, and 2, 032 image pairs, respectively.
 
@@ -22,24 +21,26 @@ The project is designed by the help of deep learning with the implementation of 
 Image uploaded by the user is tested on the trained model where parsing and segmentation are done, and the clothing is warped on the person's body.
 
 **The software tools used by this system are:**
-1.	Python 
-2.	OpenCV [Open-Source Python library for CV]
-3.	PyTorch
-4.	U2 Net 
-5.	Tensor Flow
-6.	Scikit image
+
+1. Python
+2. OpenCV [Open-Source Python library for CV]
+3. PyTorch
+4. U2 Net
+5. Tensor Flow
+6. Scikit image
 
 **DATASET:**
 
-[[Dataset_Test]](https://drive.google.com/file/d/1tE7hcVFm8Td8kRh5iYRBSDFdvZIkbUIR/view?usp=sharing) 
+[[Dataset_Test]](https://drive.google.com/file/d/1tE7hcVFm8Td8kRh5iYRBSDFdvZIkbUIR/view?usp=sharing)
 [[Dataset_Train]](https://drive.google.com/file/d/1lHNujZIq6KVeGOOdwnOXVCSR5E7Kv6xv/view?usp=sharing)
 
 ARCHITECTURE OF THE PROJECT:
 
 ![image](https://user-images.githubusercontent.com/79203522/207046985-fb0db567-7561-4d3b-90dd-0d59d9f36c50.png)
 
-## **DESCRIPTION** 
-Pandemic has played a vital role in how the people in the world operate. Where everything was offline, including education, meeting with people, etc., this sudden change in the world being shut completely, everything was forced to shift from the conventional to unconventional means. 
+## **DESCRIPTION**
+
+Pandemic has played a vital role in how the people in the world operate. Where everything was offline, including education, meeting with people, etc., this sudden change in the world being shut completely, everything was forced to shift from the conventional to unconventional means.
 
 With this project, we aim to break this barrier between customers and brands to aid customers in trying on the clothes at their own convenience. Our project helps us to eliminate the shortcomings in the already established world of online shopping where the customers get the luxury to see how the clothes sit on their bodies, in the comfort of their homes.
 
@@ -55,12 +56,12 @@ Final output after try on:
 
 ![image](https://user-images.githubusercontent.com/79203522/207047292-2957c7a0-0f5a-455b-af44-d9b3041b9c77.png)
 
-
 ## **WORKING VIDEO**
 
-https://drive.google.com/drive/folders/1shnzyOhc3JHLgesBYyEoFGlYbFod7aKl?usp=share_link
+https://drive.google.com/file/d/1F3dEEMAuLMWGWlfd3_HMbZt_GapR5NTz/view?usp=sharing
 
 ## **SCREENSHOTS OF THE INTERFACE**
+
 ![image](https://user-images.githubusercontent.com/79203522/207047085-42a583ec-3080-4721-a5a8-37de9452c4d1.png)
 
 ![image](https://user-images.githubusercontent.com/79203522/207047117-4b913e9e-8113-4160-990d-ae402a94f500.png)
@@ -69,7 +70,4 @@ https://drive.google.com/drive/folders/1shnzyOhc3JHLgesBYyEoFGlYbFod7aKl?usp=sha
 
 ![image](https://user-images.githubusercontent.com/79203522/207047207-6de06c44-6cb0-48db-885e-47c7702fea72.png)
 
-
 This project required GPU access, and since, through trials and demonstrations, we have exhausted our limit of AWS server. We are trying to extend the limit.
-
-
